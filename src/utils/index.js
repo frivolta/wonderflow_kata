@@ -1,12 +1,10 @@
 import * as R from 'ramda'
 
 import {
-    CONVERSATION_PATTERN,
     SENTENCES_SPLITTER_REGEXP,
     SINGLE_SENTENCE_REGEXP,
 } from '../helpers/regEx'
 import {AUTHOR_TYPE} from '../constants/AuthorType'
-import {twoSentenceInput} from "../helpers/inputs";
 
 // Single sentence getters
 export const getTimeFromSentence = (sentence) => sentence.match(SINGLE_SENTENCE_REGEXP)?.groups?.time || "00:00:00"
